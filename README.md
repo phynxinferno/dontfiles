@@ -6,3 +6,4 @@ poorly organized .files I use arch btw
 - [MPV](https://github.com/mpv-player/mpv)
 - [Rofi](https://github.com/davatorium/rofi)
 - [Plank](https://github.com/ricotz/plank)
+- [EWW](https://github.com/elkowar/eww)
