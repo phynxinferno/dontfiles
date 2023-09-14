@@ -1,0 +1,180 @@
+{
+    "additional-repositories": [
+        "multilib",
+        "testing"
+    ],
+    "archinstall-language": "English",
+    "audio_config": {
+        "audio": "pipewire"
+    },
+    "bootloader": "Systemd-boot",
+    "config_version": "2.6.0",
+    "debug": false,
+    "disk_config": {
+        "config_type": "default_layout",
+        "device_modifications": [
+            {
+                "device": "/dev/nvme0n1",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "flags": [
+                            "Boot"
+                        ],
+                        "fs_type": "fat32",
+                        "length": {
+                            "sector_size": null,
+                            "total_size": null,
+                            "unit": "MiB",
+                            "value": 512
+                        },
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "2c60aeb4-d638-4e57-9fcb-1c73d9c50917",
+                        "start": {
+                            "sector_size": null,
+                            "total_size": null,
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [
+                            {
+                                "compress": false,
+                                "mountpoint": "/",
+                                "name": "@",
+                                "nodatacow": false
+                            },
+                            {
+                                "compress": false,
+                                "mountpoint": "/home",
+                                "name": "@home",
+                                "nodatacow": false
+                            },
+                            {
+                                "compress": false,
+                                "mountpoint": "/var/log",
+                                "name": "@log",
+                                "nodatacow": false
+                            },
+                            {
+                                "compress": false,
+                                "mountpoint": "/var/cache/pacman/pkg",
+                                "name": "@pkg",
+                                "nodatacow": false
+                            },
+                            {
+                                "compress": false,
+                                "mountpoint": "/.snapshots",
+                                "name": "@.snapshots",
+                                "nodatacow": false
+                            }
+                        ],
+                        "flags": [],
+                        "fs_type": "btrfs",
+                        "length": {
+                            "sector_size": null,
+                            "total_size": {
+                                "sector_size": null,
+                                "total_size": null,
+                                "unit": "B",
+                                "value": 256060514304
+                            },
+                            "unit": "Percent",
+                            "value": 100
+                        },
+                        "mount_options": [
+                            "compress=zstd"
+                        ],
+                        "mountpoint": null,
+                        "obj_id": "53847539-2e3d-4259-9f9f-a97791d96336",
+                        "start": {
+                            "sector_size": null,
+                            "total_size": null,
+                            "unit": "MiB",
+                            "value": 513
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            }
+        ]
+    },
+    "disk_encryption": {
+        "encryption_type": "luks",
+        "partitions": [
+            "53847539-2e3d-4259-9f9f-a97791d96336"
+        ]
+    },
+    "hostname": "1337book",
+    "kernels": [
+        "linux-zen",
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_GB.UTF-8"
+    },
+    "mirror_config": {
+        "custom_mirrors": [],
+        "mirror_regions": {
+            "Canada": [
+                "https://muug.ca/mirror/archlinux/$repo/os/$arch",
+                "https://mirror2.evolution-host.com/archlinux/$repo/os/$arch",
+                "https://mirror.xenyth.net/archlinux/$repo/os/$arch",
+                "https://mirror.scd31.com/arch/$repo/os/$arch",
+                "https://mirror.quantum5.ca/archlinux/$repo/os/$arch",
+                "https://mirror.csclub.uwaterloo.ca/archlinux/$repo/os/$arch",
+                "https://mirror.0xem.ma/arch/$repo/os/$arch",
+                "https://arch.mirror.winslow.cloud/$repo/os/$arch",
+                "http://muug.ca/mirror/archlinux/$repo/os/$arch",
+                "http://mirror2.evolution-host.com/archlinux/$repo/os/$arch",
+                "http://mirror.xenyth.net/archlinux/$repo/os/$arch",
+                "http://mirror.scd31.com/arch/$repo/os/$arch",
+                "http://mirror.quantum5.ca/archlinux/$repo/os/$arch",
+                "http://mirror.its.dal.ca/archlinux/$repo/os/$arch",
+                "http://mirror.csclub.uwaterloo.ca/archlinux/$repo/os/$arch",
+                "http://mirror.0xem.ma/arch/$repo/os/$arch",
+                "http://archlinux.mirror.rafal.ca/$repo/os/$arch"
+            ]
+        }
+    },
+    "network_config": {
+        "type": "nm"
+    },
+    "no_pkg_lookups": false,
+    "ntp": true,
+    "offline": false,
+    "packages": [
+        "firefox-developer-edition",
+        "alacritty",
+        "cava",
+        "ttf-jetbrains-mono-nerd",
+        "ttf-jetbrains-mono"
+    ],
+    "parallel downloads": 0,
+    "profile_config": {
+        "gfx_driver": "All open-source",
+        "greeter": "sddm",
+        "profile": {
+            "custom_settings": {
+                "Awesome": {}
+            },
+            "details": [
+                "Awesome"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "script": "guided",
+    "silent": false,
+    "swap": true,
+    "timezone": "America/Toronto",
+    "version": "2.6.0"
+}
